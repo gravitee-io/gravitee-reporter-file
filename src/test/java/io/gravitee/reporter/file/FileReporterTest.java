@@ -24,6 +24,7 @@ import java.time.Month;
 import java.time.ZoneOffset;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
@@ -49,6 +50,7 @@ public class FileReporterTest {
 	@Rule
     public TemporaryFolder logFolder = new TemporaryFolder();
 
+	@Ignore
 	@Test
 	public void reportTest() throws Exception {
 		File logFile = logFolder.newFile();
