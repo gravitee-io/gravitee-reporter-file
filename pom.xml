@@ -23,7 +23,7 @@
 	<parent>
 		<groupId>io.gravitee</groupId>
 		<artifactId>gravitee-parent</artifactId>
-		<version>15</version>
+		<version>17</version>
 	</parent>
 
 	<groupId>io.gravitee.reporter</groupId>
@@ -35,9 +35,9 @@
 
 	<properties>
 		<!-- Gravitee's project versions -->
-		<gravitee-gateway-api.version>1.19.0</gravitee-gateway-api.version>
-		<gravitee-reporter-api.version>1.16.0</gravitee-reporter-api.version>
-		<gravitee-common.version>1.15.0</gravitee-common.version>
+		<gravitee-gateway-api.version>1.21.1</gravitee-gateway-api.version>
+		<gravitee-reporter-api.version>1.18.0</gravitee-reporter-api.version>
+		<gravitee-common.version>1.18.0</gravitee-common.version>
 
 		<!-- External project versions -->
 		<jetty.version>9.2.28.v20190418</jetty.version>
