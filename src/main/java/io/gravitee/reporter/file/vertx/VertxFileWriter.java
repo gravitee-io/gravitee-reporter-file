@@ -19,6 +19,7 @@ import io.gravitee.reporter.api.Reportable;
 import io.gravitee.reporter.file.MetricsType;
 import io.gravitee.reporter.file.formatter.Formatter;
 import io.vertx.core.Future;
+import io.vertx.core.Promise;
 import io.vertx.core.Vertx;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.file.AsyncFile;
@@ -109,7 +110,7 @@ public class VertxFileWriter<T extends Reportable> {
     }
 
     private Future<Void> setFile(ZonedDateTime now) {
-        Future<Void> future = Future.future();
+        Promise<Void> promise = Promise.promise();
 
         synchronized (this) {
             // Check directory
@@ -121,8 +122,8 @@ public class VertxFileWriter<T extends Reportable> {
                 File dir = new File(file.getParent());
                 if (!dir.isDirectory() || !dir.canWrite()) {
                     LOGGER.error("Cannot write reporter data to directory " + dir);
-                    future.fail(new IOException("Cannot write reporter data to directory " + dir));
-                    return future;
+                    promise.fail(new IOException("Cannot write reporter data to directory " + dir));
+                    return promise.future();
                 }
 
                 // Is this a rollover file?
@@ -167,19 +168,19 @@ public class VertxFileWriter<T extends Reportable> {
                                         );
                                 }
 
-                                future.complete();
+                                promise.complete();
                             } else {
                                 LOGGER.error("An error occurs while starting file writer for type[{}]", this.type, event.cause());
-                                future.fail(event.cause());
+                                promise.fail(event.cause());
                             }
                         }
                     );
             } catch (IOException ioe) {
-                future.fail(ioe);
+                promise.fail(ioe);
             }
         }
 
-        return future;
+        return promise.future();
     }
 
     public void write(T data) {
@@ -192,7 +193,7 @@ public class VertxFileWriter<T extends Reportable> {
     }
 
     public Future<Void> close() {
-        Future<Void> future = Future.future();
+        Promise<Void> promise = Promise.promise();
 
         synchronized (VertxFileWriter.class) {
             if (_rollTask != null) {
@@ -205,36 +206,36 @@ public class VertxFileWriter<T extends Reportable> {
                 event -> {
                     if (event.succeeded()) {
                         asyncFile = null;
-                        future.complete();
+                        promise.complete();
                     } else {
-                        future.fail(event.cause());
+                        promise.fail(event.cause());
                     }
                 }
             );
 
-        return future;
+        return promise.future();
     }
 
     private Future<Void> close(AsyncFile asyncFile) {
-        Future<Void> future = Future.future();
+        Promise<Void> promise = Promise.promise();
 
         if (asyncFile != null) {
             asyncFile.close(
                 event -> {
                     if (event.succeeded()) {
                         LOGGER.info("File writer is now closed for type [{}]", this.type);
-                        future.complete();
+                        promise.complete();
                     } else {
                         LOGGER.error("An error occurs while closing file writer for type[{}]", this.type, event.cause());
-                        future.fail(event.cause());
+                        promise.fail(event.cause());
                     }
                 }
             );
         } else {
-            future.complete();
+            promise.complete();
         }
 
-        return future;
+        return promise.future();
     }
 
     private void scheduleNextRollover(ZonedDateTime now) {
