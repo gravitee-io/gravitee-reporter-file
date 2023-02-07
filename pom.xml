@@ -38,7 +38,7 @@
 		<gravitee-gateway-api.version>1.32.3</gravitee-gateway-api.version>
 		<gravitee-reporter-api.version>1.23.1</gravitee-reporter-api.version>
 		<gravitee-common.version>1.24.0</gravitee-common.version>
-		<gravitee-node.version>1.15.1</gravitee-node.version>
+		<gravitee-node.version>1.27.3</gravitee-node.version>
 
 		<freemarker.version>2.3.31</freemarker.version>
 		<jackson-dataformat-msgpack.version>0.8.22</jackson-dataformat-msgpack.version>
