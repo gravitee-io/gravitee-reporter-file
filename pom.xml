@@ -40,7 +40,7 @@
 		<gravitee-common.version>1.24.0</gravitee-common.version>
 		<gravitee-node.version>1.15.1</gravitee-node.version>
 
-		<freemarker.version>2.3.31</freemarker.version>
+		<freemarker.version>2.3.32</freemarker.version>
 		<jackson-dataformat-msgpack.version>0.8.22</jackson-dataformat-msgpack.version>
 		<commons-validator.version>1.6</commons-validator.version>
         <!-- Property used by the publication job in CI-->
