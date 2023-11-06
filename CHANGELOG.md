@@ -1,3 +1,10 @@
+## [2.5.6](https://github.com/gravitee-io/gravitee-reporter-file/compare/2.5.5...2.5.6) (2023-11-06)
+
+
+### Bug Fixes
+
+* add j_string to escape endpoint URL ([4590222](https://github.com/gravitee-io/gravitee-reporter-file/commit/45902226fa20f34b6e35dff2c1feb3928cd4861c))
+
 ## [2.5.5](https://github.com/gravitee-io/gravitee-reporter-file/compare/2.5.4...2.5.5) (2022-08-10)
 
 
