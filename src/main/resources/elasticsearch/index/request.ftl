@@ -26,7 +26,7 @@
   ,"plan":"${metrics.getPlan()}"
   </#if>
   <#if metrics.getApi()??>
-  ,"api":"${metrics.getApi()}"
+  ,"api":"${metrics.getApi()?j_string}"
   </#if>
   <#if metrics.getApplication()??>
   ,"application":"${metrics.getApplication()}"
@@ -34,7 +34,7 @@
   ,"local-address":"${metrics.getLocalAddress()}"
   ,"remote-address":"${metrics.getRemoteAddress()}"
   <#if metrics.getEndpoint()??>
-  ,"endpoint":"${metrics.getEndpoint()}"
+  ,"endpoint":"${metrics.getEndpoint()?j_string}"
   </#if>
   <#if metrics.getTenant()??>
   ,"tenant":"${metrics.getTenant()}"
