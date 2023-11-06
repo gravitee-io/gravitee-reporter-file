@@ -4,7 +4,7 @@
   "date" : "${date}",
   "_id" : "${log.getRequestId()}",
   "@timestamp":"${@timestamp}",
-  "api":"${log.getApi()}"
+  "api":"${log.getApi()?j_string}"
   <#if log.getClientRequest()??>
   ,"client-request": {
   "method":"${log.getClientRequest().getMethod()}",
