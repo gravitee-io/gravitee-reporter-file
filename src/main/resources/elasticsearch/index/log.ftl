@@ -8,7 +8,7 @@
   <#if log.getClientRequest()??>
   ,"client-request": {
   "method":"${log.getClientRequest().getMethod()}",
-  "uri":"${log.getClientRequest().getUri()}"
+  "uri":"${log.getClientRequest().getUri()?j_string}"
     <#if log.getClientRequest().getBody()??>
     ,"body":"${log.getClientRequest().getBody()?j_string}"
     </#if>
@@ -54,7 +54,7 @@
     <#if log.getClientRequest()??>,</#if>
   "proxy-request": {
   "method":"${log.getProxyRequest().getMethod()}",
-  "uri":"${log.getProxyRequest().getUri()}"
+  "uri":"${log.getProxyRequest().getUri()?j_string}"
     <#if log.getProxyRequest().getBody()??>
     ,"body":"${log.getProxyRequest().getBody()?j_string}"
     </#if>
