@@ -7,7 +7,7 @@
   ,"@timestamp":"${@timestamp}"
   ,"transaction":"${metrics.getTransactionId()}"
   ,"method":${metrics.getHttpMethod().code()?c}
-  ,"uri":"${metrics.getUri()}"
+  ,"uri":"${metrics.getUri()?j_string}"
   ,"status":${metrics.getStatus()}
   ,"response-time":${metrics.getProxyResponseTimeMs()}
   <#if apiResponseTime??>
