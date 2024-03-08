@@ -1,3 +1,10 @@
+## [2.5.7](https://github.com/gravitee-io/gravitee-reporter-file/compare/2.5.6...2.5.7) (2024-03-08)
+
+
+### Bug Fixes
+
+* ensure uri fields are valid json ([608be1d](https://github.com/gravitee-io/gravitee-reporter-file/commit/608be1dc47cef5b199254ad8106d1500bc5eb99c))
+
 ## [2.5.6](https://github.com/gravitee-io/gravitee-reporter-file/compare/2.5.5...2.5.6) (2023-11-06)
 
 
