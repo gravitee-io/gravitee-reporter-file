@@ -8,6 +8,17 @@ image:https://circleci.com/gh/gravitee-io/gravitee-reporter-file.svg?style=svg["
 image:https://f.hubspotusercontent40.net/hubfs/7600448/gravitee-github-button.jpg["Join the community forum", link="https://community.gravitee.io?utm_source=readme", height=20]
 endif::[]
 
+[WARNING]
+====
+Major version 4.x is the latest version available for this repository.
+
+⚠️**No new major version should be released.**
+
+Starting with APIM 4.11.0, `gravitee-reporter-common`, `gravitee-reporter-elasticsearch` and `gravitee-reporter-file` have been added as maven modules in the [APIM monorepo](https://github.com/gravitee-io/gravitee-api-management).
+ 
+As a consequence, **all bug fixes** that are merged into `gravitee-reporter-file` have to be cherry-picked in the [APIM monorepo](https://github.com/gravitee-io/gravitee-api-management).
+====
+
 
 == Presentation
 
@@ -16,11 +27,11 @@ This reporter writes access logs to a file, by corresponding one line to one req
 == Compatibility matrix
 
 |===
-|Plugin version    | APIM version | JDK version
+|Plugin version    | APIM version     | JDK version
 
-| 4.x              | 10.x         | 17
-| 3.x              | 4.x          | 17
-| 2.x              | 3.x          | 8
+| 4.x              | 4.10.x           | 17
+| 3.x              | 4.0.x to 4.9.x   | 17
+| 2.x              | 3.x              | 8
 |===
 
 
