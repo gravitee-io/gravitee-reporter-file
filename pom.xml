@@ -35,7 +35,7 @@
 	<properties>
 		<gravitee-apim.version>4.10.0-alpha.4</gravitee-apim.version>
 		<gravitee-reporter-common.version>2.0.0</gravitee-reporter-common.version>
-		<gravitee-node.version>4.8.9</gravitee-node.version>
+		<gravitee-node.version>7.19.1</gravitee-node.version>
 
         <!-- Property used by the publication job in CI-->
         <publish-folder-path>graviteeio-apim/plugins/reporters</publish-folder-path>
