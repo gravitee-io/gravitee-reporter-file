@@ -1,3 +1,10 @@
+## [3.6.1](https://github.com/gravitee-io/gravitee-reporter-file/compare/3.6.0...3.6.1) (2026-03-05)
+
+
+### Bug Fixes
+
+* bump reporter-common ([0f65cfb](https://github.com/gravitee-io/gravitee-reporter-file/commit/0f65cfb9fc4176c7c9c499a989bd1a9ace3585a2))
+
 # [3.6.0](https://github.com/gravitee-io/gravitee-reporter-file/compare/3.5.6...3.6.0) (2025-10-16)
 
 
