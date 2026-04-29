@@ -1,3 +1,10 @@
+## [3.5.8](https://github.com/gravitee-io/gravitee-reporter-file/compare/3.5.7...3.5.8) (2026-04-29)
+
+
+### Bug Fixes
+
+* bump reporter-common to 1.6.10 to fix msgpack security vulnerability (APIM-12726) ([b2af093](https://github.com/gravitee-io/gravitee-reporter-file/commit/b2af0936955fa8504e832b94cbc04afccb19b00d))
+
 ## [3.5.7](https://github.com/gravitee-io/gravitee-reporter-file/compare/3.5.6...3.5.7) (2026-03-05)
 
 
