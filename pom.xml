@@ -34,7 +34,7 @@
 
 	<properties>
 		<gravitee-apim.version>4.11.4</gravitee-apim.version>
-		<gravitee-reporter-common.version>2.0.1</gravitee-reporter-common.version>
+		<gravitee-reporter-common.version>2.0.2</gravitee-reporter-common.version>
 		<gravitee-node.version>4.8.9</gravitee-node.version>
 
         <!-- Property used by the publication job in CI-->
